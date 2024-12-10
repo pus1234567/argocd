@@ -8,7 +8,7 @@ spec:
     namespace: default
     server: https://kubernetes.default.svc
   project: default
-  source:
+  sources:
     - path: root
       repoURL: https://github.com/pus1234567/argocd
       targetReversion: dev
