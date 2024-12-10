@@ -1,0 +1,10 @@
+apiVersion: argoproj.io/v1alpha1
+kind: application
+metadata:
+  name: argocd
+  namespace: argocd
+spec:
+  project: cicd
+  destination:
+    namespace: argocd
+    server:
