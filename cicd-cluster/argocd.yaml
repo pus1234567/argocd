@@ -7,4 +7,17 @@ spec:
   project: cicd
   destination:
     namespace: argocd
-    server:
+    server: https://kubernetes.default.svc
+  source:
+    repoURL: https://github.com/pus1234567/argocd
+    path: cicd-cluster/argocd
+    targetReversion: dev
+    helm:
+      valuesFiles:
+        - values.yaml
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true

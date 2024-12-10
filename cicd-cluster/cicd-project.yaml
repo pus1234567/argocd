@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: cicd
+  namespace: argocd
+spec:
+  clusterResourcesWhitelist:
+    - group: "*"
+      kind: "*"
+  destinations:
+    - name: "*"
+      namespace: "*"
+      server: "*"
+  namesoaceResourceWhitelist:
+    - group: "*"
+      kind: "*"
+  sourceNamespace:
+    - "*"
+  sourceRepos:
+    - "*"
